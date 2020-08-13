@@ -10,44 +10,41 @@
 </template>
 
 <script>
-import { v4 as uuidv4 } from "uuid";
-
 export default {
-  name: "addTodo",
+  name: 'addTodo',
   data() {
     return {
-      title: "",
-    };
+      title: '',
+    }
   },
   methods: {
     // we want to create a new object
     // using a package called uuid to generate unique id's
     addTodo(e) {
       // dont want the form to submit to the file so we add:
-      e.preventDefault();
+      e.preventDefault()
       const newTodo = {
-        id: uuidv4(),
         title: this.title,
         completed: false,
-      };
+      }
       // need to send this info up to the parent using $emit
-      this.$emit("add-todo", newTodo);
+      this.$emit('add-todo', newTodo)
       // clear input fielf after submit
-      this.title = "";
+      this.title = ''
     },
   },
-};
+}
 </script>
 
 <style scoped>
 form {
   display: flex;
 }
-input[type="text"] {
+input[type='text'] {
   flex: 10;
   padding: 5px;
 }
-input[type="submit"] {
+input[type='submit'] {
   flex: 2;
 }
 </style>

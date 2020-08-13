@@ -8,17 +8,16 @@
 </template>
 
 <script>
-import TodoItem from "./TodoItem.vue";
+import TodoItem from './TodoItem.vue'
 
 export default {
-  name: "Todos",
+  name: 'Todos',
   components: {
     TodoItem,
   },
   // passing the props from the app data
-  props: ["todos"],
-};
+  props: ['todos'],
+}
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
